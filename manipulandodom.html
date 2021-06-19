@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="page">
+      <h1>Compre hoje!</h1>
+      <ul>
+        <li id="one" class="hot">iphone <em>novo</em></li>
+        <li id="two" class="hot">Motorola G&</li>
+        <li id="three" class="hot">Samsung S10</li>
+      </ul>
+    </div>
+    <script>
+      var vetorElementos = document.querySelectorAll(".hot");
+      for (var i = 0; i < vetorElementos.length; i++) {
+        vetorElementos[i].style.color = "red";
+      }
+      var novoLi = document.createElement("li");
+      var textoDoLi = document.createTextNode("Novo item de li");
+      var elementoUl = document.getElementsByTagName("ul")[0];//primeiro elemento "ul" encontrado
+      novoLi.appendChild(textoDoLi);
+      elementoUl.appendChild(novoLi);
+      //var liRemover = document.getElementById("one");
+      //var pai = liRemover.parentNode;
+      //pai.removeChild(liRemover);
+      var elementoLi = document.getElementById("two");
+      alert(elementoLi.innerHTML);
+      elementoLi = document.getElementById("one");
+      alert(elementoLi.innerHTML)
+      //elemento.style.color = "red";
+      //alert(elemento);
+    </script>
+  </body>
+</html>
